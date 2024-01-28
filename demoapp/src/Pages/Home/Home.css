@@ -1,4 +1,10 @@
-.Home{
+.container .custom{
     height: 100vh;
     background-color: aqua;
+}
+
+.logo{
+    width: 20vw;
+    height: 40vh;
+    border-radius: 50%;
 }
