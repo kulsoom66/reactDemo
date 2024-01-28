@@ -3,7 +3,7 @@ import UserData from "./UserData";
 
 
 
-export default function FunctionalComponent(){
+export default function FunctionalComponent() {
 
     //1. State --> set, get ==> useState()
     //2. Lifecycle:
@@ -14,28 +14,33 @@ export default function FunctionalComponent(){
         {
             name: "Ali",
             age: 23,
-            position:"Soft Eng"
-        
+            position: "Soft Eng"
+
         }
     );
 
-    useEffect(()=>{
+    useEffect(() => {
         console.log("componet");
-        });
+    });
 
 
-    const changeName = (name) =>{
+    const changeName = (name) => {
         setUserValue({
             ...UserValue,
             name
         });
     }
-        return (
-            <>
-            <UserData name={UserValue.name} position={UserValue.position} age={UserValue.age}/>
-            <button onClick={()=>changeName("Adel")}>change your name</button>
-            <button onClick={()=>changeName("Ahmed")}>change your name</button>
-            </>
-        );
-    
+    let conditionalRendering = "null";
+    let flag = false;
+    return (
+        <>
+        {conditionalRendering ??    <UserData name={UserValue.name} position={UserValue.position} age={UserValue.age} />}
+        {flag? <UserData name={UserValue.name} position={UserValue.position} age={UserValue.age} /> :
+        <h1>no Data available</h1>}
+            <UserData name={UserValue.name} position={UserValue.position} age={UserValue.age} />
+            <button onClick={() => changeName("Adel")}>change your name</button>
+            <button onClick={() => changeName("Ahmed")}>change your name</button>
+        </>
+    );
+
 }

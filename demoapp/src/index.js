@@ -5,13 +5,16 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import AppClassComponenet from "./AppClassComponenet";
 import FunctionalComponent from "./functionalComponet";
+import Form from "./Form";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
+    <App />
     {/* <AppClassComponenet/> */}
-    <FunctionalComponent />
+    {/* <FunctionalComponent />
+    <Form /> */}
+
   </React.StrictMode>
 );
 
